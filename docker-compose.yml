@@ -1,0 +1,35 @@
+version: "2"
+services:
+
+  helpdesk:
+    image: tomcat
+    ports:
+      - "8000:8080"
+    links:
+      - supplements
+    volumes:
+      - ./helpdesk.war:/usr/local/tomcat/webapps/helpdesk.war
+    environment:
+      - "JAVA_OPTS=-Dsupplements.host=supplements"
+
+  supplements:
+    image: tomcat
+    ports:
+      - "8888:8080"
+    links:
+      - db
+    volumes:
+      - ./supplements.war:/usr/local/tomcat/webapps/supplements.war
+    environment:
+      - "JAVA_OPTS=-Dmongo.host=db"
+
+  db:
+    image: mysql:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 4f8jm22l-o0okmne2
+    ports:
+    - "3306:3306"
+    volumes:
+      - ./resource/db:/var/lib/mysql
+    
