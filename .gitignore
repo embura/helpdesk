@@ -2,5 +2,5 @@
 .classpath
 .project
 .gradle
-resource/db/helpdesk/
+resource/db/*
 bin/*
