@@ -5,3 +5,5 @@
 resource/*
 bin/*
 *.class
+build
+resource
