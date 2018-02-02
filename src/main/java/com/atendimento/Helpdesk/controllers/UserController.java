@@ -3,6 +3,7 @@ package com.atendimento.Helpdesk.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.atendimento.Helpdesk.model.User;
@@ -13,17 +14,19 @@ public class UserController {
 
 	@GetMapping
 	public String index(Model model) {
-		return "user/index";
-		
+		return "user/index";		
 	}
 	
-	@GetMapping
+	@GetMapping("/new")
 	public String create(Model model) {
 		model.addAttribute("user", new User());
 		return "user/index";
 	}
 	
 	
-	
+	@GetMapping("/{id}")
+	public String edit(@PathVariable("id") Long id, Model model) {		
+		return "users/edit"; 
+	}
 	
 }
