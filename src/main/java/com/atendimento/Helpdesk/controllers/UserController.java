@@ -14,13 +14,13 @@ public class UserController {
 
 	@GetMapping
 	public String index(Model model) {
-		return "user/index";		
+		return "users/index";
 	}
 	
 	@GetMapping("/new")
 	public String create(Model model) {
 		model.addAttribute("user", new User());
-		return "user/index";
+		return "users/create";
 	}
 	
 	
