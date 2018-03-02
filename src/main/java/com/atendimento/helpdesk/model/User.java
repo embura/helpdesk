@@ -1,4 +1,4 @@
-package com.atendimento.Helpdesk.model;
+package com.atendimento.helpdesk.model;
 
 import java.util.Set;
 

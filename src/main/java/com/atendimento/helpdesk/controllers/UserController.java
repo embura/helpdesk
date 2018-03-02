@@ -1,4 +1,4 @@
-package com.atendimento.Helpdesk.controllers;
+package com.atendimento.helpdesk.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.atendimento.Helpdesk.model.User;
+import com.atendimento.helpdesk.model.User;
 
 @Controller
 @RequestMapping("/users")
