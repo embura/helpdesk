@@ -23,3 +23,6 @@ Será criada uma área administrativa para visualização das métricas do helpd
 * Também será criada a de usuários onde eles poderão abrir, listar e interagir com os 
 mesmos podendo também comentar, avaliar, enviar seus dados para o suporte.
 * Fazer a geração de relatórios utilizando filtros.
+
+
+docker run --name some-mysql -v /home/jcoelho/workspace/helpdesk/resource/db/:/var/lib/mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=4f8jm22l-o0okmne2 -d mysql:lates
